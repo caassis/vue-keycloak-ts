@@ -1,6 +1,6 @@
 {
   "name": "@caassis/vue-keycloak-ts",
-  "version": "2.0.0",
+  "version": "2.0.0-beta.5",
   "author": "Mathieu Debove <mathieu@debove.dev>",
   "description": "A Keycloak plugin for Vue >= 2.x with Typescript support",
   "main": "dist/caassis-vue-keycloak.cjs.js",
@@ -15,8 +15,9 @@
     "url": "https://github.com/caassis/vue-keycloak-ts/issues"
   },
   "homepage": "https://github.com/caassis/vue-keycloak-ts",
-  "dependencies": {
-    "keycloak-js": "11.0.0"
+  "peerDependencies": {
+    "keycloak-js": "^9.0.0",
+    "vue": "^2.6.11"
   },
   "keywords": [
     "vue",
@@ -24,12 +25,18 @@
     "typescript"
   ],
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "rollup": "^1.9.0",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-node-resolve": "^4.1.0"
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "keycloak-js": "^9.0.0",
+    "rollup": "^2.23.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-dts": "^1.4.10",
+    "tslib": "^2.0.1",
+    "typescript": "^3.9.7",
+    "vue": "^2.6.11"
   },
   "scripts": {
     "build": "rollup -c",
@@ -39,5 +46,6 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "types": "dist/types.d.ts"
 }
