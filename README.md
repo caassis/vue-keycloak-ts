@@ -33,11 +33,28 @@ will be redirected back to the application and remain unauthenticated.
 yarn add @caassis/vue-keycloak-ts
 ```
 
+Install the Keycloak JS client as well:
+```
+yarn add keycloak-js
+```
+
 ### Install using npm
 
 ```
 npm install @caassis/vue-keycloak-ts --save
 ```
+
+Install the Keycloak JS client as well:
+```
+npm install keycloak-js --save
+```
+
+---
+> Note that the Keycloak JS client is a peer dependency to allow greater flexibility in choosing the client version.
+> The Keycloak JS client documentation recommends using the same version of your Keycloak Server installation:
+>> The best practice is to load the JS adapter directly from Keycloak Server as it will automatically be updated
+>> when you upgrade the server. If you copy the adapter to your web application instead, make sure you upgrade the
+>> adapter only after you have upgraded the server.
 
 ## Usage
 
@@ -136,10 +153,7 @@ See description below.
 
 If this option is a string, the plugin will treat it as an URL and make an HTTP GET request to it.
 
-If not present, the plugin will look for a global variable `window.__BASEURL__` and prepend it to `'/config'` and use
-this a default place to make a GET request.
-
-If no `window.__BASEURL__` exists, `/config` is used.
+If not present, the plugin will use `/config`.
 
 The return value from the request is used as constructor parameters for the Keycloak adapter.
 As such, it should be an object with valid keys/values.

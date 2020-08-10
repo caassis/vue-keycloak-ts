@@ -46,13 +46,13 @@ declare type VueKeyCloakOptions = {
   onReady(keycloak: VueKeyCloakInstance): void;
 }
 
-export function VueKeyCloak(Vue: typeof _Vue, options?: VueKeyCloakOptions): void {
+export default function VueKeyCloak(Vue: typeof _Vue, params?: VueKeyCloakOptions): void {
   let defaultParams = {
     config: '/config',
     init: { onLoad: 'login-required' }
   }
-  const options2 = Object.assign({}, defaultParams, options)
-  if (assertOptions(options2).hasError) throw new Error(`Invalid options given: ${assertOptions(options2).error}`)
+  const options = Object.assign({}, defaultParams, params)
+  if (assertOptions(options).hasError) throw new Error(`Invalid options given: ${assertOptions(options).error}`)
 
   const watch = new Vue({
     data() {
@@ -89,9 +89,9 @@ export function VueKeyCloak(Vue: typeof _Vue, options?: VueKeyCloakOptions): voi
       }
     }
   })
-  getConfig(options2.config)
+  getConfig(options.config)
     .then(config => {
-      init(config, watch, options2)
+      init(config, watch, options)
       Object.defineProperty(Vue.prototype, '$keycloak', {
         get() {
           return watch
