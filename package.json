@@ -1,6 +1,6 @@
 {
   "name": "@caassis/vue-keycloak-ts",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "author": "Mathieu Debove <mathieu@debove.dev>",
   "description": "A Keycloak plugin for Vue >= 2.x with Typescript support",
   "main": "dist/caassis-vue-keycloak.cjs.js",
