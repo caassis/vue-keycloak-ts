@@ -16,8 +16,8 @@
   },
   "homepage": "https://github.com/caassis/vue-keycloak-ts",
   "peerDependencies": {
-    "keycloak-js": "^9.0.0",
-    "vue": "^2.6.11"
+    "keycloak-js": ">=9.0.0 <12.0.0",
+    "vue": "^2.0.0"
   },
   "keywords": [
     "vue",
@@ -25,17 +25,17 @@
     "typescript"
   ],
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/preset-env": "^7.11.0",
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.4.0",
-    "@rollup/plugin-typescript": "^5.0.2",
-    "keycloak-js": "^9.0.0",
-    "rollup": "^2.23.0",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-dts": "^1.4.10",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "keycloak-js": ">=9.0.0 <12.0.0",
+    "rollup": "^2.28.2",
+    "@rollup/plugin-babel": "^5.2.1",
+    "rollup-plugin-dts": "^1.4.13",
     "tslib": "^2.0.1",
-    "typescript": "^3.9.7",
+    "typescript": "^4.0.3",
     "vue": "^2.6.11"
   },
   "scripts": {

@@ -6,6 +6,12 @@ vue-keycloak plugin
 ![npm](https://img.shields.io/npm/dt/@caassis/vue-keycloak-ts.svg?style=flat-square)
 ![NPM](https://img.shields.io/npm/l/@caassis/vue-keycloak-ts.svg?style=flat-square)
 
+## Prerequisites
+
+This package requires the following peer dependencies:
+* vue >= 2.0.0
+* 9.0.0 <= keycloak-js < 12.0.0
+
 ## Introduction
 
 This plugin uses the [official Keycloak JS adapter](https://github.com/keycloak/keycloak/blob/master/adapters/oidc/js/src/main/resources/keycloak.js)
